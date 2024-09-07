@@ -1,13 +1,11 @@
 function displayCharts() {
     var selectedAirport = document.getElementById('airports').value;
 
-    // Hide all airports' charts first
     var allChartCategories = document.querySelectorAll('.chart-category');
     allChartCategories.forEach(function(category) {
         category.style.display = 'none';
     });
 
-    // Display charts based on selected airport
     if (selectedAirport === 'ISAU') {
         document.getElementById('gnd-charts').style.display = 'block';
         document.getElementById('sid-charts').style.display = 'block';
@@ -35,15 +33,13 @@ function displayCharts() {
     }
 }
 
-
-// Function to show the selected chart
 function showChart(chartType) {
     var chartImage = document.getElementById('chart-image');
     var chartDisplay = document.getElementById('selected-chart');
     
-    // ISAU chart images
+    // ISAU
     if (chartType === 'airport-diagram') {
-        chartImage.src = 'ISAU/ISAU_Airport Diagram.png'; // ISAU airport diagram
+        chartImage.src = 'ISAU/ISAU_Airport Diagram.png';
     } else if (chartType === 'sid1') {
         chartImage.src = 'ISAU/ISAU_DEP_26_1M.png';
     } else if (chartType === 'sid2') {
@@ -59,9 +55,9 @@ function showChart(chartType) {
     } else if (chartType === 'star3') {
         chartImage.src = 'ISAU/ISAU_ARR_08_1S.png';
     
-    // IRFD chart images
+    // IRFD
     } else if (chartType === 'irfd-airport-diagram') {
-        chartImage.src = 'IRFD/IRFD_Airport Diagram.png'; // IRFD airport diagram
+        chartImage.src = 'IRFD/IRFD_Airport Diagram.png';
     } else if (chartType === 'irfd-sid1') {
         chartImage.src = 'IRFD/IRFD_LOGAN4.LOGAN DEP.png';
     } else if (chartType === 'irfd-sid2') {
@@ -84,7 +80,7 @@ function showChart(chartType) {
         chartImage.src = 'IRFD/IRFD_SUNST.SUNST2 ARR.png';
     }
 
-    // IPPH charts
+    // IPPH
     else if (chartType === 'ipph-airport-diagram') {
         chartImage.src = 'IPPH/IPPH_Airport Diagram.png';
     } else if (chartType === 'ipph-sid1') {
@@ -101,7 +97,7 @@ function showChart(chartType) {
         chartImage.src = 'IPPH/IPPH_HONDA.HONDA1 ARR.png';
     }
 
-    // ITKO charts
+    // ITKO
     else if (chartType === 'itko-airport-diagram') {
         chartImage.src = 'ITKO/ITKO_Airport Diagram.png';
     } else if (chartType === 'itko-sid1') {
@@ -155,22 +151,18 @@ function showChart(chartType) {
     } else if (chartType === 'ilar-star2') {
         chartImage.src = 'ILAR/ILAR_ARR_24_1M.png';
     }
-    
-    // Make sure the chart display is visible
+
     chartDisplay.style.display = 'block';
 }
 
-// Event listener for airport selection
 document.getElementById('airports').addEventListener('change', displayCharts);
 
-// Event listeners for chart items
 document.querySelectorAll('.chart-item').forEach(function(item) {
     item.addEventListener('click', function() {
         showChart(this.getAttribute('data-chart'));
     });
 });
 
-// Event listeners for chart categories
 document.querySelectorAll('.chart-category h2').forEach(function(header) {
     header.addEventListener('click', function() {
         var category = this.nextElementSibling;
@@ -180,4 +172,12 @@ document.querySelectorAll('.chart-category h2').forEach(function(header) {
             category.style.display = 'none';
         }
     });
+});
+document.getElementById('chart-image').addEventListener('click', function() {
+    var chartImage = this;
+    if (chartImage.classList.contains('zoomed')) {
+        chartImage.classList.remove('zoomed');  
+    } else {
+        chartImage.classList.add('zoomed');  
+    }
 });

@@ -1,6 +1,10 @@
-/* General Styles */
 body {
-    background: linear-gradient(to left, #343A40 1450px, #191a1f 200px);
+    background: linear-gradient(to right, 
+        #191a1f 22%,    /* Left side - Dark gray */
+        #343A40 22%,    /* Sharp transition to lighter gray */
+        #343A40 77%,    /* Middle - Light gray */
+        #191a1f 22%     /* Sharp transition back to dark gray */
+    );
     color: #343A40;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,8 +15,8 @@ header {
     background-color: #212329;
     color: white;
     text-align: center;
-    padding: 1px; /* Slimmer padding */
-    margin-bottom: 13px; /* Space between header and content */
+    padding: 1px;
+    margin-bottom: 13px; 
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -20,14 +24,14 @@ header {
 }
 
 select {
-    height: 40px; /* Adjust height to make it thicker */
-    padding: 10px; /* Add padding inside for a thicker appearance */
-    border-radius: 5px; /* Rounded corners */
+    height: 40px;
+    padding: 10px; 
+    border-radius: 5px; 
     border: 2px solid #212329;
-    font-size: 15px; /* Adjust font size */
+    font-size: 15px;
     font-family: Arial, sans-serif;
-    background-color: #212329; /* Optional: change background color */
-    color: white; /* Optional: change text color */
+    background-color: #212329; 
+    color: white; 
 }
 
 .airport-selection {
@@ -40,21 +44,21 @@ select {
 
 .right-section {
     color: white;
-    display: flex;            /* Use flexbox to align elements side by side */
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
 }
 
 .chart-buttons {
-    flex-basis: 10%;          /* The buttons section will take 30% of the width */
+    flex-basis: 10%;
     margin-right: 20px;
-    font-weight: bold; /* This makes the buttons bold */
+    font-weight: bold;
 }
 
 .chart-category {
 
-    margin-bottom: 20px; /* Space between categories */
+    margin-bottom: 20px;
 }
 
 .chart-category h2 {
@@ -72,19 +76,26 @@ select {
 }
 
 #selected-chart {
-    flex-basis: 65%;          /* The chart image section takes 65% of the width */
+    flex-basis: 65%;
     text-align: center;
 }
 
 #chart-image {
-    max-width: 50%;          /* Image fits the container */
-    height: auto;             /* Maintain aspect ratio */
+    max-width: 50%;
+    height: auto;
     display: block;
+    transition: transform 0.2s ease; /* Smooth transition */
+    cursor: zoom-in; /* Change cursor to indicate zoom action */
+}
+
+#chart-image.zoomed {
+    transform: scale(1.5); /* Zoom to 1.5 times the original size */
+    cursor: zoom-out; /* Change cursor to indicate zoom out action */
 }
 
 .beveled-header {
     background-color: #212329;
-    color: white; /* Ensure text is visible */
+    color: white;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
@@ -93,3 +104,13 @@ select {
     margin-bottom: 15px;
 }
 
+.wip {
+    position: fixed;  /* Fix the position relative to the viewport */
+    right: 80px;      /* Distance from the right edge */
+    bottom: 350px;     /* Distance from the bottom edge */
+    color: #6d6d6d;      /* White text color for visibility */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 100px;  /* Adjust the font size as needed */
+    font-weight: bold;
+}
