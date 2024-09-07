@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(to left, #343A40 1450px, #191a1f 200px);
+    color: #343A40;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #212329;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 13px; 
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    height: 40px;
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 2px solid #212329;
+    font-size: 15px; 
+    font-family: Arial, sans-serif;
+    background-color: #212329; 
+    color: white; 
+}
+
+.airport-selection {
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+.right-section {
+    color: white;
+    display: flex;            
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.chart-buttons {
+    flex-basis: 10%;          
+    margin-right: 20px;
+    font-weight: bold; 
+}
+
+.chart-category {
+
+    margin-bottom: 20px; 
+}
+
+.chart-category h2 {
+    margin: 0;
+}
+
+.chart-item {
+    cursor: pointer;
+    color: #007bff;
+    margin: 10px 0px;
+}
+
+.chart-item:hover {
+    text-decoration: underline;
+}
+
+#selected-chart {
+    flex-basis: 65%;
+    text-align: center;
+}
+
+#chart-image {
+    max-width: 50%;         
+    height: auto;             
+    display: block;
+}
+
+.beveled-header {
+    background-color: #212329;
+    color: white; 
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dock {
+    flex-basis: 25%;          
+    background-color: #212329;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.dock h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.dock .dock-category {
+    margin-bottom: 20px;
+}
+
+.dock .dock-category h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.dock .dock-item {
+    cursor: pointer;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.dock .dock-item:hover {
+    text-decoration: underline;
+}
+
+.pin-button {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}

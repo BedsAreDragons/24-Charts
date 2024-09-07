@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="FAVI/24 Charts Logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Charts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>24 Charts</h1>
+    </header>
+    
+    <div class="airport-selection">
+        <label for="airports">Select Airport:</label>
+        <select id="airports">
+            <option value="" disabled selected>Select an airport</option>
+            <option value="IRFD">IRFD</option>
+            <option value="ITKO">ITKO</option>
+            <option value="IPPH">IPPH</option>
+            <option value="IZOL">IZOL</option>
+            <option value="ILAR">ILAR</option>          
+            <option value="ISAU">ISAU</option>
+        </select>        
+    </div>
+    
+    <div class="right-section" id="chart-display">
+
+        <div class="chart-buttons">
+            <!-- ISAU -->
+            <div class="chart-category" id="gnd-charts" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="sid1">DEP_26_1M</div>
+                <div class="chart-item" data-chart="sid2">DEP_26_1L</div>
+                <div class="chart-item" data-chart="sid3">DEP_08_1K</div>
+                <div class="chart-item" data-chart="sid4">DEP_08_1J</div>
+            </div>
+            
+            <div class="chart-category" id="star-charts" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="star1">ARR_ALL_1R</div>
+                <div class="chart-item" data-chart="star2">ARR_26_1T</div>
+                <div class="chart-item" data-chart="star3">ARR_08_1S</div>
+            </div>
+            
+            <!-- IRFD -->
+            <div class="chart-category" id="gnd-charts-irfd" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="irfd-airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts-irfd" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="irfd-sid1">LOGAN4.LOGAN_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid2">KENED.KUNAV1_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid3">KENED2.KENED_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid4">OSHNN1.OSHNN_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid5">RFD5.RFD_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid6">TRN1.TRN_DEP</div>
+                <div class="chart-item" data-chart="irfd-sid7">WNNDY3.WNNDY_DEP</div>
+            </div>
+
+            <div class="chart-category" id="star-charts-irfd" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="irfd-star1">BEANS.BEANS1_ARR</div>
+                <div class="chart-item" data-chart="irfd-star2">SETHR.POPPY2_ARR</div>
+                <div class="chart-item" data-chart="irfd-star3">SUNST.SUNST2_ARR</div>
+            </div>
+                        <!-- IPPH -->
+            <div class="chart-category" id="gnd-charts-ipph" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="ipph-airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts-ipph" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="ipph-sid1">DINER1.DINER_DEP</div>
+                <div class="chart-item" data-chart="ipph-sid2">CAMEL1.CAMEL_DEP</div>
+                <div class="chart-item" data-chart="ipph-sid3">PER1.PER_DEP</div>
+            </div>
+
+            <div class="chart-category" id="star-charts-ipph" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="ipph-star1">SISTA.SISTA1_ARR</div>
+                <div class="chart-item" data-chart="ipph-star2">TALIS.TALIS1_ARR</div>
+                <div class="chart-item" data-chart="ipph-star3">HONDA.HONDA1_ARR</div>
+            </div>
+
+            <!-- ITKO -->
+            <div class="chart-category" id="gnd-charts-itko" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="itko-airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts-itko" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="itko-sid1">DEP_02_1W</div>
+                <div class="chart-item" data-chart="itko-sid2">DEP_02-31_2A-D</div>
+                <div class="chart-item" data-chart="itko-sid3">DEP_13_1X</div>
+                <div class="chart-item" data-chart="itko-sid4">DEP_20_1Y</div>
+                <div class="chart-item" data-chart="itko-sid5">DEP_31_1Z</div>
+                <div class="chart-item" data-chart="itko-sid6">DEP_20-13_2B-C</div>
+                <div class="chart-item" data-chart="itko-sid7">DEP_20-31_2C-D</div>
+                <div class="chart-item" data-chart="itko-sid8">DEP_ALL_2A-B-C-D</div>
+            </div>
+
+            <div class="chart-category" id="star-charts-itko" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="itko-star1">ARR_13_1H</div>
+                <div class="chart-item" data-chart="itko-star2">ARR_13_2H</div>
+                <div class="chart-item" data-chart="itko-star3">ARR_20_1E</div>
+                <div class="chart-item" data-chart="itko-star4">ARR_20_1N</div>
+                <div class="chart-item" data-chart="itko-star5">ARR_31_1K</div>
+                <div class="chart-item" data-chart="itko-star6">ARR_31_1L</div>
+            </div>
+            <!-- IZOL -->
+            <div class="chart-category" id="gnd-charts-izol" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="izol-airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts-izol" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="izol-sid1">DEP_10_1L</div>
+                <div class="chart-item" data-chart="izol-sid2">DEP_28_1J</div>
+            </div>
+
+            <div class="chart-category" id="star-charts-izol" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="izol-star1">ARR_28_1K</div>
+                <div class="chart-item" data-chart="izol-star2">ARR_10_1H</div>
+            </div>
+            <!-- ILAR -->
+            <div class="chart-category" id="gnd-charts-ilar" style="display: none;">
+                <h2 class="beveled-header">GND</h2>
+                <div class="chart-item" data-chart="ilar-airport-diagram">Airport Diagram</div>
+            </div>
+
+            <div class="chart-category" id="sid-charts-ilar" style="display: none;">
+                <h2 class="beveled-header">SID</h2>
+                <div class="chart-item" data-chart="ilar-sid1">DEP_06_1J</div>
+                <div class="chart-item" data-chart="ilar-sid2">DEP_24_1L</div>
+            </div>
+
+            <div class="chart-category" id="star-charts-ilar" style="display: none;">
+                <h2 class="beveled-header">STAR</h2>
+                <div class="chart-item" data-chart="ilar-star1">ARR_06_1K</div>
+                <div class="chart-item" data-chart="ilar-star2">ARR_24_1M</div>
+            </div>           
+        </div>
+        
+        <div id="selected-chart" style="display: none;">
+            <img id="chart-image" src="" alt="Chart" />
+            <button id="pin-button" class="pin-button" style="display: none;">📌 Pin</button>
+        </div>
+
+        <div class="dock" id="dock">
+            <h2 class="beveled-header">DOCK</h2>
+            <div id="dock-content"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
