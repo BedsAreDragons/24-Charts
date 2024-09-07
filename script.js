@@ -1,11 +1,13 @@
 function displayCharts() {
     var selectedAirport = document.getElementById('airports').value;
 
+    // Hide all airports' charts first
     var allChartCategories = document.querySelectorAll('.chart-category');
     allChartCategories.forEach(function(category) {
         category.style.display = 'none';
     });
 
+    // Display charts based on selected airport
     if (selectedAirport === 'ISAU') {
         document.getElementById('gnd-charts').style.display = 'block';
         document.getElementById('sid-charts').style.display = 'block';
@@ -131,7 +133,6 @@ function showChart(chartType) {
     } else if (chartType === 'itko-star6') {
         chartImage.src = 'ITKO/ITKO_ARR_31_1L.png';
     
-    // IZOL charts   
     } else if (chartType === 'izol-airport-diagram') {
         chartImage.src = 'IZOL/IZOL_Airport Diagram.png';
     } else if (chartType === 'izol-sid1') {
@@ -143,7 +144,6 @@ function showChart(chartType) {
     } else if (chartType === 'izol-star2') {
         chartImage.src = 'IZOL/IZOL_ARR_10_1H.png';
     
-    // ILAR charts       
     } else if (chartType === 'ilar-airport-diagram') {
         chartImage.src = 'ILAR/ILAR_Airport Diagram.png';
     } else if (chartType === 'ilar-sid1') {
@@ -155,18 +155,22 @@ function showChart(chartType) {
     } else if (chartType === 'ilar-star2') {
         chartImage.src = 'ILAR/ILAR_ARR_24_1M.png';
     }
-
+    
+    // Make sure the chart display is visible
     chartDisplay.style.display = 'block';
 }
 
+// Event listener for airport selection
 document.getElementById('airports').addEventListener('change', displayCharts);
 
+// Event listeners for chart items
 document.querySelectorAll('.chart-item').forEach(function(item) {
     item.addEventListener('click', function() {
         showChart(this.getAttribute('data-chart'));
     });
 });
 
+// Event listeners for chart categories
 document.querySelectorAll('.chart-category h2').forEach(function(header) {
     header.addEventListener('click', function() {
         var category = this.nextElementSibling;
@@ -177,48 +181,3 @@ document.querySelectorAll('.chart-category h2').forEach(function(header) {
         }
     });
 });
-
-function showChart(chartType) {
-    var chartImage = document.getElementById('chart-image');
-    var chartDisplay = document.getElementById('selected-chart');
-    var pinButton = document.getElementById('pin-button');
-    
-    pinButton.style.display = 'inline-block';
-    pinButton.setAttribute('data-chart', chartType);
-    
-    chartDisplay.style.display = 'block';
-}
-
-function pinChart() {
-    var pinButton = document.getElementById('pin-button');
-    var chartType = pinButton.getAttribute('data-chart');
-    var selectedAirport = document.getElementById('airports').value;
-    var dockContent = document.getElementById('dock-content');
-    
-    if (!selectedAirport) {
-        alert('Please select an airport first.');
-        return;
-    }
-    
-    var dockCategory = document.getElementById('dock-' + selectedAirport);
-    if (!dockCategory) {
-        dockCategory = document.createElement('div');
-        dockCategory.className = 'dock-category';
-        dockCategory.id = 'dock-' + selectedAirport;
-        var header = document.createElement('h3');
-        header.textContent = selectedAirport;
-        dockCategory.appendChild(header);
-        dockContent.appendChild(dockCategory);
-    }
-
-    var dockItem = document.createElement('div');
-    dockItem.className = 'dock-item';
-    dockItem.textContent = document.querySelector(`.chart-item[data-chart="${chartType}"]`).textContent;
-    dockItem.setAttribute('data-chart', chartType);
-    dockItem.addEventListener('click', function() {
-        showChart(chartType);
-    });
-    dockCategory.appendChild(dockItem);
-}
-
-document.getElementById('pin-button').addEventListener('click', pinChart);
