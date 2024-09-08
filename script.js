@@ -109,11 +109,11 @@ function showChart(chartType) {
     } else if (chartType === 'itko-sid4') {
         chartImage.src = 'ITKO/ITKO_DEP_20_1Y.png';
     } else if (chartType === 'itko-sid5') {
-        chartImage.src = 'ITKO/ITKO_DEP_20-13_2B-C.png';
-    } else if (chartType === 'itko-sid6') {
-        chartImage.src = 'ITKO/ITKO_DEP_20-31_2C-D.png';
-    } else if (chartType === 'itko-sid7') {
         chartImage.src = 'ITKO/ITKO_DEP_31_1Z.png';
+    } else if (chartType === 'itko-sid6') {
+        chartImage.src = 'ITKO/ITKO_DEP_20-13_2B-C.png';
+    } else if (chartType === 'itko-sid7') {
+        chartImage.src = 'ITKO/ITKO_DEP_20-31_2C-D.png';
     } else if (chartType === 'itko-sid8') {
         chartImage.src = 'ITKO/ITKO_DEP_ALL_2A-B-C-D.png';
     } else if (chartType === 'itko-star1') {
