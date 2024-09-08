@@ -61,16 +61,14 @@ function showChart(chartType) {
     } else if (chartType === 'irfd-sid1') {
         chartImage.src = 'IRFD/IRFD_LOGAN4.LOGAN DEP.png';
     } else if (chartType === 'irfd-sid2') {
-        chartImage.src = 'IRFD/IRFD_KENED.KUNAV1 DEP.png';
-    } else if (chartType === 'irfd-sid3') {
         chartImage.src = 'IRFD/IRFD_KENED2.KENED DEP.png';
-    } else if (chartType === 'irfd-sid4') {
+    } else if (chartType === 'irfd-sid3') {
         chartImage.src = 'IRFD/IRFD_OSHNN1.OSHNN DEP.png';
-    } else if (chartType === 'irfd-sid5') {
+    } else if (chartType === 'irfd-sid4') {
         chartImage.src = 'IRFD/IRFD_RFD5.RFD DEP.png';
-    } else if (chartType === 'irfd-sid6') {
+    } else if (chartType === 'irfd-sid5') {
         chartImage.src = 'IRFD/IRFD_TRN1.TRN DEP.png';
-    } else if (chartType === 'irfd-sid7') {
+    } else if (chartType === 'irfd-sid6') {
         chartImage.src = 'IRFD/IRFD_WNNDY3.WNNDY DEP.png';
     } else if (chartType === 'irfd-star1') {
         chartImage.src = 'IRFD/IRFD_BEANS.BEANS1 ARR.png';
@@ -78,6 +76,8 @@ function showChart(chartType) {
         chartImage.src = 'IRFD/IRFD_SETHR.POPPY2 ARR.png';
     } else if (chartType === 'irfd-star3') {
         chartImage.src = 'IRFD/IRFD_SUNST.SUNST2 ARR.png';
+    } else if (chartType === 'irfd-star4') {
+        chartImage.src = 'IRFD/IRFD_KENED.KUNAV1 ARR.png';
     }
 
     // IPPH
