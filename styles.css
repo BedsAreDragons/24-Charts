@@ -103,14 +103,3 @@ select {
     font-weight: bold;
     margin-bottom: 15px;
 }
-
-.wip {
-    position: fixed;  /* Fix the position relative to the viewport */
-    right: 80px;      /* Distance from the right edge */
-    bottom: 350px;     /* Distance from the bottom edge */
-    color: #6d6d6d;      /* White text color for visibility */
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 100px;  /* Adjust the font size as needed */
-    font-weight: bold;
-}
