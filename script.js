@@ -139,7 +139,7 @@ function showChart(chartType) {
     } else if (chartType === 'itko-star3') {
         chartImage.src = 'ITKO/ITKO_BLANK1E, EURAD1E, HONDA1E, ONDER1E, RENDR1E ARR.png';
     } else if (chartType === 'itko-star4') {
-        chartImage.src = 'ITKO/ITKO_BLANK1N, EURAD1N, BLANK1S, EURAD1S ARR.png';
+        chartImage.src = 'ITKO/ITKO_BLANK1N, EURAD1N, BLANK1S, EURAD1S ARR .png';
     } else if (chartType === 'itko-star5') {
         chartImage.src = 'ITKO/ITKO_BLANK1K, EURAD1K, HONDA1K, ONDER1K, RENDR1K ARR.png';
     } else if (chartType === 'itko-star6') {
