@@ -46,6 +46,8 @@ function displayCharts() {
         document.getElementById('gnd-charts-ipap').style.display = 'block';
         document.getElementById('sid-charts-ipap').style.display = 'block';
         document.getElementById('star-charts-ipap').style.display = 'block';
+    } else if (selectedAirport === 'IBLT') {
+        document.getElementById('gnd-charts-iblt').style.display = 'block';
     }
 }
 
@@ -228,6 +230,10 @@ function showChart(chartType) {
         chartImage.src = 'IPAP/IPAP_JUSTY.JUSTY1 ARR.png';
     } else if (chartType === 'ipap-star2') {
         chartImage.src = 'IPAP/IPAP_JAMSI.JAMSI1 ARR.png';
+    }
+    //IBLT
+    } else if (chartType === 'iblt-airport-diagram') {
+        chartImage.src = 'IBLT/IBLT_Airport Diagram.png';
     }
 
     chartDisplay.style.display = 'block';
