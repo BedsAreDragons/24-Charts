@@ -233,7 +233,7 @@ function showChart(chartType) {
     }
     //IBLT
     } else if (chartType === 'iblt-airport-diagram') {
-        chartImage.src = 'IBLT/IBLT_Airport Diagram.png';
+        chartImage.src = 'IBLT/IBLT_Airport Diagram.pdf';
     }
 
     chartDisplay.style.display = 'block';
